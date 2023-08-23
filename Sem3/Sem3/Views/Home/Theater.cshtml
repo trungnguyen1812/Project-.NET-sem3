@@ -1,0 +1,129 @@
+﻿
+@{
+    ViewBag.Title = "Theater";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section class="parallax-container overlay-1" data-parallax-img="/Content/asess/images/banner/dienDan.jpg">
+    <div class="parallax-content breadcrumbs-custom context-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-9">
+                    <h2 class="breadcrumbs-custom-title">Theater</h2>
+                    <ul class="breadcrumbs-custom-path">
+                        <li><a href="@Url.Action("index")">Home</a></li>
+                        <li class="active">Theater</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Base typography -->
+
+<section class="section section-lg bg-gray-1">
+    <div class="container">
+        <h2 class="text-center">Welcome to our forum</h2>
+        <div class="row">
+            <div class="col-12">
+                <div class="tabs-custom tabs-horizontal tabs-classic" id="tabs-1">
+                    <ul class="nav nav-tabs nav-tabs-classic">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" href="#tabs-1-1"
+                               data-toggle="tab">outstanding</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" href="#tabs-1-2" data-toggle="tab">post</a>
+                        </li>
+
+                    </ul>
+
+
+
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="tabs-1-1">
+                            <div class="box-event-modern">
+                                <div class="idea">
+                                    <div class="event-item-modern">
+                                        <h4 class="event-item-modern-title"><a href="#">Family food</a></h4>
+                                        <div class="event-item-modern-text">
+                                            <p>
+                                                Every family in Vietnam must have dishes in the meal including: soup, braised, fried, fried, etc.....
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                    <div class="event-item-modern">
+                                        <h4 class="event-item-modern-title"><a href="#">how to cook radish soup</a></h4>
+                                        <div class="event-item-modern-text">
+                                            <p>
+                                                Should choose to buy the ribs with a natural light red color, when gently pressing the ribs with your hand will have a certain elasticity.
+                                                To cook delicious soup, you should choose both the fat and lean ribs. In addition, you prefer to buy ribs with flat, small bones, so the ribs will have more meat.
+                                                Avoid buying ribs that have unusual dark spots, unpleasant odors, and purple color that are no longer fresh because those are ribs that have been stored for a long time.
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                    <div class="event-item-modern">
+                                        <h4 class="event-item-modern-title"><a href="#">how to cook stew</a></h4>
+                                        <div class="event-item-modern-text">
+                                            <p>
+                                                Every family in Vietnam must have dishes in the meal including: soup, braised, fried, fried, etc.....
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                    
+
+                                </div>
+
+                            </div>
+                         </div>
+
+                         
+
+
+
+
+
+
+                                    <!--=======================================POST========================================================== -->
+
+                                    <div class="tab-pane fade" id="tabs-1-2">
+                                        <div class="box-event-modern">
+                                            <h3>Post your article</h3>
+                                            <div class="idea">
+                                                @using (Html.BeginForm())
+                                                {
+                                                    @Html.AntiForgeryToken()
+                                                    <div class="form-group">
+                                                        <label for="article-title">Article title</label><br>
+                                                        <input name="content" id="content" type="text" placeholder="Article">
+                                                    </div>
+                                                    <br>
+                                                    <div class="form-group">
+
+                                                        <label for="article-title">Content</label><br>
+                                                        <textarea name="content" id="content" cols="80" rows="10"></textarea>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <div class="col-md-offset-2 col-md-10">
+                                                            <input type="submit" value="Post" class="btn btn-default" />
+                                                        </div>
+                                                    </div>
+                                                }
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+</section>
+

@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Sem3.Models.recipe>
+@{
+    ViewBag.Title = "FreeRecipes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="parallax-container overlay-1" data-parallax-img="/Content/asess/images/banner/dienDan.jpg">
+    <div class="parallax-content breadcrumbs-custom context-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-9">
+                    <h2 class="breadcrumbs-custom-title">Free recipes</h2>
+                    <ul class="breadcrumbs-custom-path">
+                        <li><a href="@Url.Action("index")">Home</a></li>
+                        <li class="active">Free recipes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-lg bg-default">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-md-9 col-lg-7 wow-outer">
+                <div class="wow slideInDown">
+                    <h2>Free recipes</h2>
+                    <p class="text-opacity-80">We provide the most delicious food recipes to our customers. Here are some recipes for our most popular main dishes and desserts..</p>
+                </div>
+            </div>
+        </div>
+        <div class="row row-20 row-lg-30">
+            <div class="col-md-6 col-lg-4 wow-outer">
+                <div class="wow fadeInUp">
+                    <div class="product-featured">
+                        @foreach (var item in Model)
+                        {
+                            <div class="product-featured-figure">
+                                <img src="@item.imgUpload" alt="" width="370" height="395" />
+                                <div class="product-featured-button"><a class="button button-primary" href="#">open</a></div>
+                            </div>
+                            <div class="product-featured-caption">
+                                <h4><a class="product-featured-title" href="#">@item.Name</a></h4>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

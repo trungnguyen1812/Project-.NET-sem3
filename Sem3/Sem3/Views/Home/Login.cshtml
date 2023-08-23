@@ -1,0 +1,60 @@
+﻿@model Sem3.Models.user
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoustLogin.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <div class="animated bounceInDown">
+            <div class="container">
+                <span class="error animated tada" id="msg"></span>
+                <form name="form1" action="index.html" class="box" onsubmit="return checkStuff()">
+                    <h4 style="color:blue">User <span style="color:white">Dashboard</span></h4>
+                    <h5 style="color:white">Sign in to your account.</h5>
+                    <div style="margin-top:70px;">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            <div style="color:white;margin-right :25px;">
+                                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                            </div>
+                            <div style=" margin-left:30px;">
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <div style="color:white;margin-right :30px;">
+                                @Html.LabelFor(model => model.PassWord, htmlAttributes: new { @class = "control-label col-md-2" })
+                            </div>
+                            <div style=" margin-left:28px;">
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.PassWord, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.PassWord, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" value="Sign In" class="btn1">
+                </form>
+                <a class="button button-white button-sm" href="@Url.Action("Register")">Sign Up</a>
+            </div>
+
+        </div>
+
+
+        <hr />
+
+
+
+    </div>
+}

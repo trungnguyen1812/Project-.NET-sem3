@@ -1,0 +1,116 @@
+﻿
+@{
+    ViewBag.Title = "FAQ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+    .faq-item {
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+
+    .faq-body {
+        display: none;
+        margin-top: 30px;
+    }
+
+    .faq-wrapper {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .faq-inner {
+        padding: 30px;
+        background: aliceblue;
+    }
+
+    .faq-plus {
+        float: right;
+        font-size: 1.4em;
+        line-height: 1em;
+        cursor: pointer;
+    }
+    a {
+        text-decoration: none;
+    }
+    hr {
+        background-color: #9b9b9b;
+    }
+</style>
+
+<section class="parallax-container overlay-1" data-parallax-img="/Content/asess/images/breadcrumbs.jpg">
+    <div class="parallax-content breadcrumbs-custom context-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-9">
+                    <h2 class="breadcrumbs-custom-title">FAQ'S</h2>
+                    <ul class="breadcrumbs-custom-path">
+                        <li><a href="@Url.Action("index")">Home</a></li>
+                        <li class="active">FAQ'S</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="row">
+        <div class="faq-wrapper">
+            <div class="header">
+
+            </div>
+            <div class="faq-inner">
+                <div class="faq-item">
+                    <h3>
+                        How to start cooking ?
+                        <span class="faq-plus">&plus;</span>
+                    </h3>
+                    <div class="faq-body">
+                        On Pesto you'll find lots of free recipes, from simple to complex. Choose a dish that matches your skills and preferences to practice
+                    </div>
+                </div>
+                <hr>
+                <div class="faq-item">
+                    <h3>
+                        Is cooking important ?
+                        <span class="faq-plus">&plus;</span>
+                    </h3>
+                    <div class="faq-body">
+                        Knowing how to cook is a great and necessary skill. The first is to keep yourself from going hungry, the next is to eat well. Learning to cook helps you know how to choose the right food, ensuring nutrition as well as science for yourself and your family
+                    </div>
+                </div>
+                <hr>
+                <div class="faq-item">
+                    <h3>
+                        Is it hard to learn to cook ?
+                        <span class="faq-plus">&plus;</span>
+                    </h3>
+                    <div class="faq-body">
+                        Difficult or easy depends on each person, but as long as you love cooking, things will be simpler for you.
+                    </div>
+                </div>
+                <hr>
+                <div class="faq-item">
+                    <h3>
+                        Is there a cost to learn to cook at Pesto ?
+                        <span class="faq-plus">&plus;</span>
+                    </h3>
+                    <div class="faq-body">
+                        Our articles are completely free, of course on the website there are also different paid packages to have a source of income to maintain - Hope you understand
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(".faq-plus").on('click', function () {
+        $(this).parent().parent().find('.faq-body').slideToggle();
+    });
+</script>
